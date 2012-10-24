@@ -1,0 +1,1 @@
+/usr/bin/c++   -shared   -o librhipebridge.dylib -install_name /Users/sguha/mz/anewproject/build/src/librhipebridge.dylib CMakeFiles/rhipebridge.dir/engine.cc.o CMakeFiles/rhipebridge.dir/io.cc.o /usr/lib/libz.dylib /usr/local/lib/libprotobuf.dylib -framework JavaVM -F/Library/Frameworks/R.framework/.. -framework R 
