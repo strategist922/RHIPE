@@ -12,5 +12,6 @@ code/ec2/bin/hadoop-ec2-env.sh
 .R*
 code/java/Rhipe.jar
 *.class
-target/*
-build/*
+java/target/*
+src/target/*
+*/build/*
