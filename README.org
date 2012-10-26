@@ -6,24 +6,24 @@ Ideally,
 
 To build Java jar file
 
-#+begin_src 
-cd java
-mvn package
+#+begin_src sh
+  cd java
+  mvn package
 #+end_src
 
 and to compile C code
 
-#+begin_src 
-cd c
-mkdir target
-cd target
-cmake ../../
-make
+#+begin_src sh
+  cd c
+  mkdir target
+  cd target
+  cmake ../../
+  make
 #+end_src
 
 And to run
-#+begin_src
-java -jar ../../java/target/rhipe-1.0-jar-with-dependencies.jar $PWD/c/librhipebridge.dylib /Library/Frameworks/R.framework/Resources
+#+begin_src sh
+  java -jar ../../java/target/rhipe-1.0-jar-with-dependencies.jar $PWD/c/librhipebridge.dylib /Library/Frameworks/R.framework/Resources
 #+end_src
 
 
