@@ -21,7 +21,7 @@ and to compile C code
   make
 #+end_src
 
-And to run
+And to run (on OS X)
 #+begin_src sh
   java -jar ../../java/target/rhipe-1.0-jar-with-dependencies.jar $PWD/c/librhipebridge.dylib /Library/Frameworks/R.framework/Resources
 #+end_src
