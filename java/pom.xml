@@ -13,7 +13,7 @@
   <packaging>jar</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <skip.tests>false</skip.tests>
+    <skip.tests>true</skip.tests>
   </properties>
 
   <repositories>
@@ -340,27 +340,27 @@
 	</configuration>
       </plugin>
 
-      <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-jar-plugin</artifactId>
-	<version>2.3.1</version>
-	<configuration>
-	  <finalName>${project.name}-${project.version}</finalName>
-	</configuration>
-      </plugin>
+      <!-- <plugin> -->
+      <!-- 	<groupId>org.apache.maven.plugins</groupId> -->
+      <!-- 	<artifactId>maven-jar-plugin</artifactId> -->
+      <!-- 	<version>2.3.1</version> -->
+      <!-- 	<configuration> -->
+      <!-- 	  <finalName>${project.name}-${project.version}</finalName> -->
+      <!-- 	</configuration> -->
+      <!-- </plugin> -->
 
-      <plugin>
-	<artifactId>maven-resources-plugin</artifactId>
-	<executions>              
-	  <execution>
-	    <id>process-resources</id>
-	    <phase>process-resources</phase>
-	    <goals>
-              <goal>resources</goal>
-	    </goals>
-	  </execution>
-	</executions>
-      </plugin>
+      <!-- <plugin> -->
+      <!-- 	<artifactId>maven-resources-plugin</artifactId> -->
+      <!-- 	<executions>               -->
+      <!-- 	  <execution> -->
+      <!-- 	    <id>process-resources</id> -->
+      <!-- 	    <phase>process-resources</phase> -->
+      <!-- 	    <goals> -->
+      <!--         <goal>resources</goal> -->
+      <!-- 	    </goals> -->
+      <!-- 	  </execution> -->
+      <!-- 	</executions> -->
+      <!-- </plugin> -->
       
       <plugin>
 	<artifactId>maven-assembly-plugin</artifactId>
@@ -369,7 +369,7 @@
 	  <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-          <appendAssemblyIdref>false</appendAssemblyIdref>
+          <appendAssemblyIdref>true</appendAssemblyIdref>
 	  <archive>
             <manifest>
               <mainClass>org.godhuli.rhipe.bridge.REngineCore</mainClass>

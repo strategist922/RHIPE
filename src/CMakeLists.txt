@@ -4,6 +4,7 @@
 #########################
 
 include_directories (.)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDEBUG")
 
 execute_process(COMMAND R CMD config --cppflags OUTPUT_VARIABLE RCPP OUTPUT_STRIP_TRAILING_WHITESPACE)
 MESSAGE("Output of R CMD --cflags: ${RCPP}")
@@ -45,6 +46,6 @@ include_directories(${JNI_INCLUDE_DIRS})
 link_libraries(${JAVA_JVM_LIBRARY})
 
 ## Build Components
-add_library(rhipebridge SHARED engine.cc io.cc)
+add_library(rhipebridge SHARED engine.cc io.cc misc.cc)
 # add_executable(rhipebridge engine.c)
 target_link_libraries(rhipebridge ${RLIB})

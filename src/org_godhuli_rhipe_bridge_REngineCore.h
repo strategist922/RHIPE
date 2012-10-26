@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     org_godhuli_rhipe_bridge_REngineCore
  * Method:    intializeR
- * Signature: ([Ljava/lang/String;)I
+ * Signature: (Ljava/lang/String;[Ljava/lang/String;)I
  */
 JNIEXPORT jint JNICALL Java_org_godhuli_rhipe_bridge_REngineCore_intializeR
-  (JNIEnv *, jobject, jobjectArray);
+  (JNIEnv *, jobject, jstring, jobjectArray);
 
 /*
  * Class:     org_godhuli_rhipe_bridge_REngineCore
