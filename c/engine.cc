@@ -29,9 +29,6 @@ int initialize
   ptr_R_WriteConsole	= NULL;
   ptr_R_ReadConsole	= NULL;
   setup_Rmainloop();
-  rexpress("print(runif(1)); y=x+1");
-  rexpress("j+1");
-
   return(0);
 }
 
@@ -59,12 +56,10 @@ JNIEXPORT jint JNICALL Java_org_godhuli_rhipe_bridge_REngineCore_intializeR
   }
   const char * c=env->GetStringUTFChars(rhome, 0);
   char* rhomestr = strdup(c);
-  // Not sure if the following code releases the argument or just 'c'
   // env->ReleaseStringUTFChars(rhome, c); 
   int initRes=initialize(argc, rhomestr,argv);
   return initRes;
 }
-
 
 int main(int argc, char *argv[]){
   printf("Hello Sweet World\n");

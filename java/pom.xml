@@ -38,6 +38,12 @@
       <url>http://oss.sonatype.org/content/repositories/releases</url>
       <name>Sonatype's OSS Maven Repository</name>
     </repository>
+    <repository>
+      <id>oracleReleases</id>
+      <name>Oracle Released Java Packages</name>
+      <url>http://download.oracle.com/maven</url>
+      <layout>default</layout>
+    </repository>
   </repositories>
   
   <pluginRepositories>
@@ -49,6 +55,12 @@
   </pluginRepositories>
   
   <dependencies>
+
+    <dependency>
+      <groupId>com.sleepycat</groupId>
+      <artifactId>je</artifactId>
+      <version>3.3.75</version>
+    </dependency>
 
     <dependency>
       <groupId>log4j</groupId>
@@ -371,9 +383,9 @@
           </descriptorRefs>
           <appendAssemblyIdref>true</appendAssemblyIdref>
 	  <archive>
-            <manifest>
-              <mainClass>org.godhuli.rhipe.bridge.REngineCore</mainClass>
-            </manifest>
+            <!-- <manifest> -->
+            <!--   <mainClass>org.godhuli.rhipe.bridge.REngineCore</mainClass> -->
+            <!-- </manifest> -->
           </archive>
 	</configuration>
         <executions>

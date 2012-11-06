@@ -37,7 +37,7 @@ SEXP rexpress(const char* cmd)
   cmdexpr = PROTECT(R_ParseVector(cmdSexp, -1, &status, R_NilValue));
   if (status != PARSE_OK) {
     UNPROTECT(2);
-    Rf_error("invalid call: %s", cmd);
+    Rf_error("RHIPE: invalid call: %s", cmd);
     return(R_NilValue);
   }
   for(i = 0; i < Rf_length(cmdexpr); i++)
