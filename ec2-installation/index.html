@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content=""/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-02 13:43:58 PDT"/>
+<meta name="generated" content="2013-01-20 14:01:43 PST"/>
 <meta name="author" content="Saptarshi Guha"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -60,10 +60,8 @@
                                  font-weight:bold; }
   /*]]>*/-->
 </style>
-<link href='http://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Tienne:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="http://people.mozilla.com/~sguha/newstyles.css" />
+<link href='http://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="http://people.mozilla.org/~sguha/newstyles.css" />
 <script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
@@ -162,7 +160,7 @@ tar -xvzf whirr-0.5.0-cdh3u4.tar.gz
 </p>
 
 
-<pre class="src src-sh"><span style="color: #FF5803;">cd</span> whirr-*
+<pre class="src src-sh"><span style="color: #8cd0d3;">cd</span> whirr-*
 mvn clean install
 </pre>
 
@@ -209,26 +207,26 @@ Also in the following properties file( save it as <code>hadoop.properties</code>
 whirr.instance-templates=1 hadoop-jobtracker+hadoop-namenode,1 hadoop-datanode+hadoop-tasktracker
 whirr.provider=aws-ec2
 
-whirr.identity=${<span style="color: #2E91AF;">env</span>:AWS_ACCESS_KEY_ID}
-whirr.credential=${<span style="color: #2E91AF;">env</span>:AWS_SECRET_ACCESS_KEY}
+whirr.identity=${<span style="color: #f0dfaf;">env</span>:AWS_ACCESS_KEY_ID}
+whirr.credential=${<span style="color: #f0dfaf;">env</span>:AWS_SECRET_ACCESS_KEY}
 
-whirr.private-key-file=${<span style="color: #2E91AF;">sys</span>:user.home}/.ssh/id_rsa
-whirr.public-key-file=${<span style="color: #2E91AF;">sys</span>:user.home}/.ssh/id_rsa.pub
+whirr.private-key-file=${<span style="color: #f0dfaf;">sys</span>:user.home}/.ssh/id_rsa
+whirr.public-key-file=${<span style="color: #f0dfaf;">sys</span>:user.home}/.ssh/id_rsa.pub
 
 whirr.hadoop-install-function=install_cdh_hadoop
 whirr.hadoop-configure-function=configure_cdh_hadoop
 whirr.hardware-id=m1.large
 
 
-<span style="color: #EE0000;">#</span><span style="color: #EE0000; font-style: italic;">rightscale - west coast (http://thecloudmarket.com/image/ami-4810400d--rightimage-ubuntu-10-04-x64-v5-5-9-6)</span>
+<span style="color: #7f9f7f;">#</span><span style="color: #7f9f7f;">rightscale - west coast (http://thecloudmarket.com/image/ami-4810400d--rightimage-ubuntu-10-04-x64-v5-5-9-6)</span>
 whirr.image-id=us-west-1/ami-4810400d
 whirr.location-id=us-west-1
 
-<span style="color: #EE0000;">#</span><span style="color: #EE0000; font-style: italic;">rightscale - east coast</span>
-<span style="color: #EE0000;">#</span><span style="color: #EE0000; font-style: italic;">whirr.image-id=us-east-1/ami-ccb35ea5                                                                                                                                           </span>
-<span style="color: #EE0000;">#</span><span style="color: #EE0000; font-style: italic;">whirr.location-id=us-east-1 </span>
+<span style="color: #7f9f7f;">#</span><span style="color: #7f9f7f;">rightscale - east coast</span>
+<span style="color: #7f9f7f;">#</span><span style="color: #7f9f7f;">whirr.image-id=us-east-1/ami-ccb35ea5                                                                                                                                           </span>
+<span style="color: #7f9f7f;">#</span><span style="color: #7f9f7f;">whirr.location-id=us-east-1 </span>
 
-<span style="color: #EE0000;"># </span><span style="color: #EE0000; font-style: italic;">hadoop options</span>
+<span style="color: #7f9f7f;"># </span><span style="color: #7f9f7f;">hadoop options</span>
 hadoop-mapreduce.mapred.child.ulimit=unlimited
 </pre>
 
@@ -289,23 +287,23 @@ This is the output off the diff
      hadoop-tasktracker)
        start_hadoop_daemon tasktracker
        ;;
-     <span style="color: #A535AE; font-weight: bold;">esac</span>
-   <span style="color: #A535AE; font-weight: bold;">done</span>
+     <span style="color: #f0dfaf; font-weight: bold;">esac</span>
+   <span style="color: #f0dfaf; font-weight: bold;">done</span>
 +  install_rhipe
  }
 
- <span style="color: #A535AE; font-weight: bold;">function</span> <span style="color: #1A50B8;">start_namenode</span>() {
-   <span style="color: #A535AE; font-weight: bold;">if</span> which dpkg &amp;&gt; /dev/null; <span style="color: #A535AE; font-weight: bold;">then</span>
-     apt-get -y install $<span style="color: #2E91AF;">HADOOP</span>-namenode
+ <span style="color: #f0dfaf; font-weight: bold;">function</span> <span style="color: #8cd0d3;">start_namenode</span>() {
+   <span style="color: #f0dfaf; font-weight: bold;">if</span> which dpkg &amp;&gt; /dev/null; <span style="color: #f0dfaf; font-weight: bold;">then</span>
+     apt-get -y install $<span style="color: #f0dfaf;">HADOOP</span>-namenode
 @@ -140,5 +141,24 @@
-     yum install -y $<span style="color: #2E91AF;">HADOOP</span>-$<span style="color: #2E91AF;">daemon</span>
-   <span style="color: #A535AE; font-weight: bold;">fi</span>
-   service $<span style="color: #2E91AF;">HADOOP</span>-$<span style="color: #2E91AF;">daemon</span> start
+     yum install -y $<span style="color: #f0dfaf;">HADOOP</span>-$<span style="color: #f0dfaf;">daemon</span>
+   <span style="color: #f0dfaf; font-weight: bold;">fi</span>
+   service $<span style="color: #f0dfaf;">HADOOP</span>-$<span style="color: #f0dfaf;">daemon</span> start
  }
 
-+<span style="color: #A535AE; font-weight: bold;">function</span> <span style="color: #1A50B8;">install_rhipe</span>() {
-+    <span style="color: #EE0000;">## </span><span style="color: #EE0000; font-style: italic;">other mirrors:  http://cran.r-project.org/mirrors.html</span>
-+    echo <span style="color: #008000;">'deb http://cran.fhcrc.org/bin/linux/ubuntu lucid/'</span> &gt;&gt;  /etc/apt/sources.list
++<span style="color: #f0dfaf; font-weight: bold;">function</span> <span style="color: #8cd0d3;">install_rhipe</span>() {
++    <span style="color: #7f9f7f;">## </span><span style="color: #7f9f7f;">other mirrors:  http://cran.r-project.org/mirrors.html</span>
++    echo <span style="color: #cc9393;">'deb http://cran.fhcrc.org/bin/linux/ubuntu lucid/'</span> &gt;&gt;  /etc/apt/sources.list
 +    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 +    sudo apt-get update
 +    sudo apt-get install -y r-base-dev r-recommended r-cran-rodbc ess
@@ -317,8 +315,8 @@ This is the output off the diff
 +    sudo sudo make install
 +    sudo ldconfig
 +    sudo apt-get install pkg-config
-+    export <span style="color: #2E91AF;">HADOOP</span>=/usr/
-+    echo <span style="color: #008000;">'export HADOOP=/usr/'</span> &gt;&gt; /etc/bash.bashrc
++    export <span style="color: #f0dfaf;">HADOOP</span>=/usr/
++    echo <span style="color: #cc9393;">'export HADOOP=/usr/'</span> &gt;&gt; /etc/bash.bashrc
 +    wget https://github.com/downloads/saptarshiguha/RHIPE/Rhipe_0.70.tar.gz
 +    sudo R CMD INSTALL Rhipe_0.70.tar.gz
 +}
@@ -381,7 +379,7 @@ Started cluster of 2 instances
 
 
 
-<pre class="src src-sh">whirr/bin/whirr  run-script --config hadoop.properties --script <span style="color: #008000;">"/path/to/my/script"</span>
+<pre class="src src-sh">whirr/bin/whirr  run-script --config hadoop.properties --script <span style="color: #cc9393;">"/path/to/my/script"</span>
 </pre>
 
 <ul>
@@ -392,7 +390,7 @@ Started cluster of 2 instances
 
 
 
-<pre class="src src-sh">ssh -i ./cluster-test.pem $<span style="color: #2E91AF;">USER</span>@node 
+<pre class="src src-sh">ssh -i ./cluster-test.pem $<span style="color: #f0dfaf;">USER</span>@node 
 </pre>
 
 <ul>
@@ -436,9 +434,9 @@ Now start R, (type <code>R</code> , you should see R 2.15). The following code c
 
 
 <pre class="src src-R">options(width=200)
-<span style="color: #009944;">library</span>(Rhipe)
+<span style="color: #dcdccc;">library</span>(Rhipe)
 rhinit()
-rhls(<span style="color: #008000;">"/"</span>)
+rhls(<span style="color: #cc9393;">"/"</span>)
 </pre>
 
 <p>
@@ -446,7 +444,7 @@ See the HDFS file listing
 </p>
 
 
-<pre class="src src-R">&gt; rhls(<span style="color: #008000;">"/"</span>)
+<pre class="src src-R">&gt; rhls(<span style="color: #cc9393;">"/"</span>)
   permission owner      group size          modtime    file
 1 drwxrwxrwx  hdfs supergroup    0 2012-10-02 18:25 /hadoop
 2 drwxrwxrwx  hdfs supergroup    0 2012-10-02 18:25  /hbase
@@ -460,15 +458,15 @@ And now run a quick mapreduce script (only to check things work)
 </p>
 
 
-<pre class="src src-R">map <span style="color: #009944;">&lt;-</span> rhmap({
+<pre class="src src-R">map <span style="color: #dcdccc;">&lt;-</span> rhmap({
   rhcollect(sample(1:10,1),c(1,runif(1)))
 })
-results <span style="color: #009944;">&lt;-</span> rhwatch(rhmr(map     = map
-                        ,reduce = rhoptions()$templates$colsummer
-                        ,N      = 100000L,mapred=list(mapred.map.tasks=10)))
+results <span style="color: #dcdccc;">&lt;-</span> rhwatch(map     = map
+                   ,reduce = rhoptions()$templates$colsummer
+                   ,N      = c(100000L,10))
 
-results <span style="color: #009944;">&lt;-</span> do.call(rbind, lapply(results,<span style="color: #008000;">"[["</span>,2))
-results <span style="color: #009944;">&lt;-</span> cbind(results, results[,2]/results[,1])
+results <span style="color: #dcdccc;">&lt;-</span> do.call(rbind, lapply(results,<span style="color: #cc9393;">"[["</span>,2))
+results <span style="color: #dcdccc;">&lt;-</span> cbind(results, results[,2]/results[,1])
 </pre>
 
 
@@ -487,7 +485,7 @@ In summary,
 </p><ul>
 <li>download Whirr, build it
 </li>
-<li>download <a href="./hadoop.properties">./hadoop.properties</a> and <a href="./configure_cdh_hadoop.sh">./configure_cdh_hadoop.sh</a>, keeping the latter one in <code>whirr-installation-folder/functions</code> (create the <code>functions</code> folder if not present)
+<li>download <a href="./hadoop.properties">./hadoop.properties</a> and <a href="./configure_cdh_hadoop.sh">./configure<sub>cdh</sub><sub>hadoop</sub>.sh</a>, keeping the latter one in <code>whirr-installation-folder/functions</code> (create the <code>functions</code> folder if not present)
 </li>
 <li>Launch the cluster <code>whirr/bin/whirr launch-cluster --config hadoop.properties</code> (here <code>whirr/</code> is a soft link to my installation folder)
 </li>
@@ -519,7 +517,7 @@ And hopefully, a few 10's of minutes later, you're good to go.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-10-02 13:43:58 PDT</p>
+<p class="date">Date: 2013-01-20 14:01:43 PST</p>
 <p class="author">Author: Saptarshi Guha</p>
 <p class="creator">Org version 7.8.11 with Emacs version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
